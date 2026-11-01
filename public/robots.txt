@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /tutor/
+Disallow: /student/
+Disallow: /parent/
+Disallow: /masuk
+
+Sitemap: https://pinteryuks.fiyus.me/sitemap.xml

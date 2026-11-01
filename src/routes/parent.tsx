@@ -18,6 +18,12 @@ import { cn } from '~/lib/utils'
 export const Route = createFileRoute('/parent')({
   ssr: false,
   beforeLoad: createRouteGuard('parent'),
+  head: () => ({
+    meta: [
+      { name: 'robots', content: 'noindex, nofollow' },
+      { title: 'Portal Orang Tua — Pintar Yuk' },
+    ],
+  }),
   component: ParentLayout,
 })
 

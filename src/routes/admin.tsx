@@ -5,6 +5,12 @@ import { createRouteGuard } from '~/lib/route-guard'
 export const Route = createFileRoute('/admin')({
   ssr: false,
   beforeLoad: createRouteGuard('admin'),
+  head: () => ({
+    meta: [
+      { name: 'robots', content: 'noindex, nofollow' },
+      { title: 'Dashboard Admin — Pintar Yuk' },
+    ],
+  }),
   component: AdminLayout,
 })
 

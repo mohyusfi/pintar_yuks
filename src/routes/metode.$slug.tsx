@@ -23,6 +23,8 @@ const RegisterModal = React.lazy(() =>
   }))
 )
 
+const SITE_URL = (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, '') || 'https://pinteryuks.fiyus.me'
+
 export const Route = createFileRoute('/metode/$slug')({
   loader: ({ params }) => {
     const method = getLearningMethodBySlug(params.slug)
@@ -39,11 +41,56 @@ export const Route = createFileRoute('/metode/$slug')({
     const desc = method
       ? method.heroLead
       : 'Metodologi bimbingan belajar tatap muka terarah di Pinter Yuks Kota Palu.'
+    const url = method ? `${SITE_URL}/metode/${method.slug}` : `${SITE_URL}/metode`
+
+    const breadcrumbSchema = method
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Beranda',
+              item: `${SITE_URL}/`,
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: 'Metode Belajar',
+              item: `${SITE_URL}/#metode`,
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: method.title,
+              item: url,
+            },
+          ],
+        }
+      : null
     return {
       meta: [
         { title },
         { name: 'description', content: desc },
+        { property: 'og:title', content: title },
+        { property: 'og:description', content: desc },
+        { property: 'og:url', content: url },
+        { property: 'og:type', content: 'article' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:description', content: desc },
       ],
+      links: [
+        { rel: 'canonical', href: url },
+      ],
+      scripts: breadcrumbSchema
+        ? [
+            {
+              type: 'application/ld+json',
+              children: JSON.stringify(breadcrumbSchema),
+            },
+          ]
+        : [],
     }
   },
   component: LearningMethodDetailPage,
@@ -289,25 +336,29 @@ function LearningMethodDetailPage() {
                   </div>
 
                   {/* Tombol Navigasi Antar Step */}
-                  <div className="flex items-center justify-between pt-4 border-t border-[#D2D2D2]">
+                  <div className="flex items-center justify-between gap-2.5 pt-4 border-t border-[#D2D2D2]">
                     <button
                       type="button"
                       disabled={activeStepIndex === 0}
                       onClick={() => setActiveStepIndex((prev) => Math.max(0, prev - 1))}
-                      className="btn btn-outline btn-sm inline-flex items-center gap-1.5 disabled:opacity-30 disabled:pointer-events-none"
+                      className="btn btn-outline btn-sm flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-2.5 sm:px-3.5 disabled:opacity-30 disabled:pointer-events-none"
                     >
-                      <ArrowLeft className="w-3.5 h-3.5" />
-                      <span>Tahap Sebelumnya</span>
+                      <ArrowLeft className="w-3.5 h-3.5 shrink-0" />
+                      <span className="truncate">
+                        <span className="hidden sm:inline">Tahap </span>Sebelumnya
+                      </span>
                     </button>
 
                     <button
                       type="button"
                       disabled={activeStepIndex === method.simulationSteps.length - 1}
                       onClick={() => setActiveStepIndex((prev) => Math.min(method.simulationSteps.length - 1, prev + 1))}
-                      className="btn btn-primary btn-sm inline-flex items-center gap-1.5 disabled:opacity-30 disabled:pointer-events-none"
+                      className="btn btn-primary btn-sm flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-2.5 sm:px-3.5 disabled:opacity-30 disabled:pointer-events-none"
                     >
-                      <span>Tahap Berikutnya</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <span className="truncate">
+                        <span className="hidden sm:inline">Tahap </span>Berikutnya
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 shrink-0" />
                     </button>
                   </div>
                 </motion.div>

@@ -20,6 +20,12 @@ import { authStore, DEMO_ACCOUNTS, type UserRole } from '~/lib/auth-store'
 import { isDemoLogin } from '~/lib/login-mode'
 
 export const Route = createFileRoute('/masuk')({
+  head: () => ({
+    meta: [
+      { name: 'robots', content: 'noindex, nofollow' },
+      { title: 'Masuk ke Portal — Pintar Yuk' },
+    ],
+  }),
   component: LoginPage,
 })
 

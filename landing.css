@@ -2205,6 +2205,9 @@ body:has(.mobile-drawer.active) .lp-marquee-track,
 }
 
 @media (max-width: 640px) {
+  .lp-interactive-simulator {
+    padding: var(--space-4);
+  }
   .lp-methods-poster-grid {
     grid-template-columns: 1fr;
   }

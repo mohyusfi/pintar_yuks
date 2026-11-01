@@ -15,6 +15,12 @@ import { createRouteGuard } from '~/lib/route-guard'
 export const Route = createFileRoute('/tutor')({
   ssr: false,
   beforeLoad: createRouteGuard('tutor'),
+  head: () => ({
+    meta: [
+      { name: 'robots', content: 'noindex, nofollow' },
+      { title: 'Portal Tutor — Pintar Yuk' },
+    ],
+  }),
   component: TutorLayout,
 })
 
