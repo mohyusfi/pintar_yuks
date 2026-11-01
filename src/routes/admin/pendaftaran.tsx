@@ -291,7 +291,7 @@ Pendaftaran putra/putri Anda, *${credentialsModalData.studentName}*, untuk progr
 ${parentCredsInfo}
 • Tautan Masuk: https://tadulakocendekia.sch.id/masuk
 
-Mohon simpan informasi kredensial ini dengan baik. Terima kasih atas kepercayaan Anda pada Pintar Yuk.`
+Mohon simpan informasi kredensial ini dengan baik. Terima kasih atas kepercayaan Anda pada Pinter Yuks.`
 
     navigator.clipboard.writeText(text)
     setIsTemplateCopied(true)
@@ -345,10 +345,10 @@ Mohon simpan informasi kredensial ini dengan baik. Terima kasih atas kepercayaan
     if (duplicateStudent) {
       if (duplicateStudent.status === 'nonaktif') {
         setAddModalError(
-          'Email ini tercatat sebagai siswa nonaktif di Pintar Yuk. Silakan ubah status siswa di menu Data Siswa untuk pengaktifan kembali.'
+          'Email ini tercatat sebagai siswa nonaktif di Pinter Yuks. Silakan ubah status siswa di menu Data Siswa untuk pengaktifan kembali.'
         )
       } else {
-        setAddModalError('Email ini telah terdaftar sebagai siswa aktif di Pintar Yuk.')
+        setAddModalError('Email ini telah terdaftar sebagai siswa aktif di Pinter Yuks.')
       }
       return
     }

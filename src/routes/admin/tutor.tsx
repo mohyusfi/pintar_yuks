@@ -146,9 +146,9 @@ function AdminTutorPage() {
   // Copy WhatsApp template
   const handleCopyWhatsAppTemplate = () => {
     if (!credentialsModalData) return
-    const text = `*PINTAR YUK — KREDENSIAL AKSES PORTAL PENGAJAR*
+    const text = `*PINTER YUKS — KREDENSIAL AKSES PORTAL PENGAJAR*
 Yth. Bapak/Ibu/Kak ${credentialsModalData.name},
-Akun portal pengajar Anda di Bimbel Pintar Yuk telah aktif.
+Akun portal pengajar Anda di Bimbel Pinter Yuks telah aktif.
 
 *Akses Portal Pengajar:*
 • Email: ${credentialsModalData.email}
@@ -245,7 +245,7 @@ Gunakan akun ini untuk memantau jadwal mengajar, pengisian presensi kelas, modul
     },
     {
       key: 'subjects' as const,
-      label: 'Mata Pelajaran Pintar Yuk',
+      label: 'Mata Pelajaran Pinter Yuks',
       count: subjects.length,
       unit: 'Bidang Studi',
       description: 'Kurikulum materi bimbingan lintas 4 jenjang program',
@@ -386,7 +386,7 @@ Gunakan akun ini untuk memantau jadwal mengajar, pengisian presensi kelas, modul
             Direktori Tutor & Mata Pelajaran
           </h1>
           <p className="text-xs sm:text-sm text-[#555555] mt-1">
-            Manajemen pengajar Pintar Yuk, kualifikasi akademik, dan distribusi kurikulum mata pelajaran.
+            Manajemen pengajar Pinter Yuks, kualifikasi akademik, dan distribusi kurikulum mata pelajaran.
           </p>
         </div>
 

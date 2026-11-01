@@ -146,7 +146,7 @@ function AdminPembayaranPage() {
     {
       key: 'ALL' as const,
       label: 'Semua Tagihan',
-      description: 'Rekap tagihan SPP Pintar Yuk',
+      description: 'Rekap tagihan SPP Pinter Yuks',
       count: invoices.length,
       amount: invoices.reduce((sum, inv) => sum + inv.amount, 0),
       icon: CreditCard,

@@ -1,46 +1,11 @@
-import { ArrowRight } from 'lucide-react'
-import { motion } from 'motion/react'
-import { fadeInUp, fadeInRight, staggerContainer, viewportConfig } from '~/lib/motion'
+import { ArrowRight, Brain, Clock, GraduationCap, Users } from 'lucide-react'
+import { motion, type Variants } from 'motion/react'
+import { fadeInUp, staggerContainer, viewportConfig } from '~/lib/motion'
 
 interface HeroProps {
   onOpenRegister: () => void
-  onSelectProgram: (code: string) => void
+  onSelectProgram?: (code: string) => void
 }
-
-const SCHEDULE_BOARD_ITEMS = [
-  {
-    code: 'SD',
-    title: 'SD Cendekia',
-    seat: 'Sisa 3 kursi',
-    isHot: false,
-    isUtbk: false,
-    time: 'Senin, Rabu, Jumat · 15.00–16.30',
-  },
-  {
-    code: 'SMP',
-    title: 'SMP Prestasi',
-    seat: 'Sisa 4 kursi',
-    isHot: false,
-    isUtbk: false,
-    time: 'Selasa, Kamis, Sabtu · 15.30–17.00',
-  },
-  {
-    code: 'SMA',
-    title: 'SMA Sukses',
-    seat: 'Sisa 2 kursi',
-    isHot: false,
-    isUtbk: false,
-    time: 'Senin, Rabu, Jumat · 16.30–18.00',
-  },
-  {
-    code: 'UTBK',
-    title: 'Intensif UTBK-SNBT',
-    seat: 'Sisa 2 kursi',
-    isHot: true,
-    isUtbk: true,
-    time: 'Selasa, Kamis, Sabtu · 16.00–18.00',
-  },
-] as const
 
 const FACTS = [
   {
@@ -57,7 +22,59 @@ const FACTS = [
   },
 ] as const
 
-export function Hero({ onOpenRegister, onSelectProgram }: HeroProps) {
+const HERO_BADGES = [
+  {
+    icon: Users,
+    text: 'Maks. 12 Siswa',
+    posClass: 'lp-hero-badge-top-left',
+  },
+  {
+    icon: Brain,
+    text: 'Paham Konsep',
+    posClass: 'lp-hero-badge-top-right',
+  },
+  {
+    icon: Clock,
+    text: 'Presensi Real-Time',
+    posClass: 'lp-hero-badge-bottom-left',
+  },
+  {
+    icon: GraduationCap,
+    text: 'SD · SMP · SMA · UTBK',
+    posClass: 'lp-hero-badge-bottom-right',
+  },
+] as const
+
+const heroVisualVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.88, y: 28 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      duration: 0.75,
+      ease: [0.16, 1, 0.3, 1],
+      delay: 0.1,
+    },
+  },
+}
+
+const heroBadgeVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.5, y: 14 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 280,
+      damping: 18,
+      delay: 0.28 + i * 0.12,
+    },
+  }),
+}
+
+export function Hero({ onOpenRegister }: HeroProps) {
   return (
     <section id="beranda" className="lp-hero">
       <div className="container">
@@ -69,12 +86,9 @@ export function Hero({ onOpenRegister, onSelectProgram }: HeroProps) {
             animate="visible"
           >
             <motion.h1 variants={fadeInUp} className="lp-hero-title">
-              Paham dari konsep dasar, jadwal pasti, orang tua selalu <em>tahu.</em>
+              Paham dari konsep dasar, orang tua selalu <em>tahu.</em>
             </motion.h1>
 
-            <motion.p variants={fadeInUp} className="lp-hero-lead">
-              Untuk siswa SD, SMP, SMA, dan persiapan UTBK. Kelas kecil maksimal 12 siswa, tutor mendampingi logika berpikir sampai paham, dan notifikasi kehadiran langsung masuk ke akun portal orang tua setiap sesi.
-            </motion.p>
             <motion.div variants={fadeInUp} className="lp-hero-actions">
               <motion.button
                 type="button"
@@ -91,39 +105,48 @@ export function Hero({ onOpenRegister, onSelectProgram }: HeroProps) {
             </motion.div>
           </motion.div>
 
-          <motion.aside
-            className="lp-board"
-            aria-label="Jadwal kelas mingguan"
-            variants={fadeInRight}
-            initial={false}
+          <motion.div
+            className="lp-hero-visual-wrapper"
+            variants={heroVisualVariants}
+            initial="hidden"
             animate="visible"
           >
-            <div className="lp-board-head">
-              <span className="lp-board-title">Jadwal Kelas</span>
-            </div>
-            <ul className="lp-board-list">
-              {SCHEDULE_BOARD_ITEMS.map((item) => (
-                <li key={item.code}>
-                  <button
-                    type="button"
-                    className={`lp-board-row${item.isUtbk ? ' is-utbk' : ''}`}
-                    onClick={() => onSelectProgram(item.code)}
+            <div className="lp-hero-oval-float">
+              <div className="lp-hero-oval-card">
+                <picture>
+                  <source srcSet="/assets/hero-illustration.webp" type="image/webp" />
+                  <img
+                    src="/assets/hero-illustration.jpg"
+                    alt="Ilustrasi siswa dan tutor Pinter Yuks belajar interaktif tatap muka"
+                    className="lp-hero-oval-img"
+                    width={2000}
+                    height={1493}
+                    loading="eager"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+
+              {HERO_BADGES.map((badge, idx) => {
+                const Icon = badge.icon
+                return (
+                  <motion.div
+                    key={badge.text}
+                    className={`lp-hero-badge ${badge.posClass}`}
+                    custom={idx}
+                    variants={heroBadgeVariants}
+                    initial="hidden"
+                    animate="visible"
                   >
-                    <div className="lp-board-row-top">
-                      <strong>{item.title}</strong>
-                      <span className={`lp-board-seat${item.isHot ? ' is-hot' : ''}`}>
-                        {item.seat}
-                      </span>
-                    </div>
-                    <span className="lp-board-time">{item.time}</span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-            <div className="lp-board-foot">
-              <span>Klik jenjang untuk daftar &amp; ikut 1x kelas gratis.</span>
+                    <span className="lp-hero-badge-inner">
+                      <Icon className="lp-hero-badge-icon" aria-hidden="true" />
+                      <span className="lp-hero-badge-text">{badge.text}</span>
+                    </span>
+                  </motion.div>
+                )
+              })}
             </div>
-          </motion.aside>
+          </motion.div>
         </div>
 
         <motion.ul

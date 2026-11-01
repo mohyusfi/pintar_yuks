@@ -1,5 +1,5 @@
 # LAPORAN RANCANGAN REKAYASA PERANGKAT LUNAK
-## PENGEMBANGAN SISTEM INFORMASI BIMBINGAN BELAJAR BERBASIS WEB "PINTAR YUK" DI KOTA PALU MENGGUNAKAN METODE SDLC WATERFALL
+## PENGEMBANGAN SISTEM INFORMASI BIMBINGAN BELAJAR BERBASIS WEB "PINTER YUKS" DI KOTA PALU MENGGUNAKAN METODE SDLC WATERFALL
 
 ---
 
@@ -14,7 +14,7 @@
   1. **Lidiya** — NIM: F5512530118
   2. **Winda Tesalonika** — NIM: F5512520088
   3. **Moh. Yusfi** — NIM: F5512520089
-- **Jenama Resmi Aplikasi**: **Pintar Yuk**
+- **Jenama Resmi Aplikasi**: **Pinter Yuks**
 - **Tagline**: *"Pahami Konsepnya, Bukan Sekadar Hafal Rumusnya"*
 - **Status Dokumen**: Laporan Akhir Perancangan Sistem (Final Design Report)
 
@@ -22,7 +22,7 @@
 
 ## RINGKASAN EKSEKUTIF
 
-Laporan rancangan ini mendokumentasikan rekayasa sistem informasi bimbingan belajar berbasis web (*single-tenant*) untuk lembaga bimbingan belajar **Pintar Yuk** di Kota Palu. Sistem dirancang guna mendigitalkan dan mengintegrasikan seluruh rantai operasional lembaga, mulai dari pendaftaran mandiri calon siswa terproteksi anti-bot, penjadwalan bimbingan bebas bentrok (*anti-conflict schedule*), presensi sesi digital dengan kunci audit permanen 24 jam, distribusi modul ajar dan rapor berkala, hingga pengelolaan tagihan SPP bulanan disertai penerbitan kwitansi digital resmi.
+Laporan rancangan ini mendokumentasikan rekayasa sistem informasi bimbingan belajar berbasis web (*single-tenant*) untuk lembaga bimbingan belajar **Pinter Yuks** di Kota Palu. Sistem dirancang guna mendigitalkan dan mengintegrasikan seluruh rantai operasional lembaga, mulai dari pendaftaran mandiri calon siswa terproteksi anti-bot, penjadwalan bimbingan bebas bentrok (*anti-conflict schedule*), presensi sesi digital dengan kunci audit permanen 24 jam, distribusi modul ajar dan rapor berkala, hingga pengelolaan tagihan SPP bulanan disertai penerbitan kwitansi digital resmi.
 
 Pengembangan perangkat lunak mengadopsi model **Software Development Life Cycle (SDLC) Waterfall** berdurasi 12 minggu. Arsitektur dibangun menggunakan teknologi web modern berkinerja tinggi, mencakup **TanStack Start (React 19)** dengan paradigma *Server Functions*, basis data relasional **Supabase PostgreSQL 15+** yang dikelola via **Drizzle ORM**, proteksi identitas **Role-Based Access Control (RBAC)**, serta gaya antarmuka visual **Poster Kontras Tinggi** berbasis Tailwind CSS v4. Seluruh fitur kritis telah melalui verifikasi fungsional berbasis *Black-Box Testing* dan pengujian otomatis *End-to-End* (Playwright) serta *Unit Testing* (Vitest) dengan tingkat keberhasilan uji 100% tanpa regresi.
 
@@ -30,7 +30,7 @@ Pengembangan perangkat lunak mengadopsi model **Software Development Life Cycle 
 
 ## KATA PENGANTAR
 
-Puji syukur kami panjatkan ke hadirat Tuhan Yang Maha Esa atas limpahan rahmat dan karunia-Nya sehingga dokumen **Laporan Rancangan Rekayasa Perangkat Lunak — Sistem Informasi Bimbingan Belajar Pintar Yuk** ini dapat diselesaikan dengan baik dan tepat waktu.
+Puji syukur kami panjatkan ke hadirat Tuhan Yang Maha Esa atas limpahan rahmat dan karunia-Nya sehingga dokumen **Laporan Rancangan Rekayasa Perangkat Lunak — Sistem Informasi Bimbingan Belajar Pinter Yuks** ini dapat diselesaikan dengan baik dan tepat waktu.
 
 Laporan ini disusun sebagai pemenuhan tugas besar mata kuliah Rekayasa Perangkat Lunak (RPL) pada Program Studi S1 Teknik Informatika, Fakultas Teknik, Universitas Tadulako. Melalui proyek ini, tim pengembang berupaya menghadirkan solusi teknologi nyata yang relevan bagi ekosistem pendidikan nonformal di Kota Palu yang selama ini masih menghadapi kendala operasional konvensional.
 
@@ -80,7 +80,7 @@ Palu, 31 Oktober 2026
 
 ### 1.1 Latar Belakang Masalah
 
-Bimbingan belajar (bimbel) memegang peranan strategis dalam menunjang keberhasilan akademik peserta didik di Kota Palu, mulai dari pemantapan konsep kurikulum sekolah dasar hingga menengah, serta persiapan intensif seleksi masuk perguruan tinggi negeri (UTBK-SNBT). Lembaga bimbingan belajar **Pintar Yuk** didirikan dengan filosofi pedagogis mendasar: mengarahkan siswa untuk memahami esensi konsep materi pelajaran secara mendalam (*first-principles thinking*), bukan sekadar menghafal rumus cepat.
+Bimbingan belajar (bimbel) memegang peranan strategis dalam menunjang keberhasilan akademik peserta didik di Kota Palu, mulai dari pemantapan konsep kurikulum sekolah dasar hingga menengah, serta persiapan intensif seleksi masuk perguruan tinggi negeri (UTBK-SNBT). Lembaga bimbingan belajar **Pinter Yuks** didirikan dengan filosofi pedagogis mendasar: mengarahkan siswa untuk memahami esensi konsep materi pelajaran secara mendalam (*first-principles thinking*), bukan sekadar menghafal rumus cepat.
 
 Namun demikian, efektivitas proses pembelajaran tatap muka sering kali terhambat oleh inefisiensi tata kelola operasional lembaga. Sebagian besar lembaga bimbingan belajar di wilayah Kota Palu saat ini masih mengandalkan pencatatan berbasis kertas (buku besar dan formulir fisik) yang dipadukan dengan koordinasi percakapan instan (*WhatsApp group*).
 
@@ -113,7 +113,7 @@ Berdasarkan latar belakang tersebut, rumusan masalah dalam penelitian dan peranc
 ### 1.3 Batasan Masalah
 
 Guna menjaga fokus perancangan, batasan masalah ditetapkan sebagai berikut:
-1. **Konteks Lembaga**: Sistem dirancang khusus untuk operasional bimbingan belajar tatap muka terpadu lembaga Pintar Yuk di Kota Palu (*single-tenant*).
+1. **Konteks Lembaga**: Sistem dirancang khusus untuk operasional bimbingan belajar tatap muka terpadu lembaga Pinter Yuks di Kota Palu (*single-tenant*).
 2. **Kapasitas Rombongan Belajar (Rombel)**: Kuota rombel dibatasi ketat maksimal 12 orang siswa per kelas sesuai standar operasional lembaga.
 3. **Pemisahan Peran Pengguna (RBAC)**: Hak akses diisolasi secara mutlak ke dalam 4 peran: **Super Admin & Staf TU**, **Tutor/Pengajar**, **Siswa**, dan **Orang Tua/Wali**.
 4. **Audit Presensi**: Sesi presensi terkunci secara otomatis dan permanen setelah 24 jam terhitung sejak waktu pelaksanaan sesi.
@@ -148,7 +148,7 @@ Tujuan yang ingin dicapai melalui perancangan perangkat lunak ini adalah:
 Sistem informasi berbasis web merupakan kumpulan komponen perangkat keras, perangkat lunak, data, dan pengguna yang saling berinteraksi menggunakan protokol standar internet (HTTP/HTTPS) untuk mengumpulkan, mengolah, menyimpan, dan mendistribusikan informasi. Keunggulan utama sistem berbasis web modern adalah sifatnya yang *cross-platform*, dapat diakses tanpa instalasi manual di perangkat klien, serta pembaruan kode terpusat di peladen (*server*).
 
 #### 2.1.2 Role-Based Access Control (RBAC)
-*Role-Based Access Control* (RBAC) adalah metode pembatasan otorisasi sistem berdasarkan peran pengguna di dalam suatu organisasi. Dalam arsitektur Pintar Yuk, setiap pengguna diverifikasi identitasnya melalui token JSON Web Token (JWT) yang membawa klaim peran (*role claim*). Hak akses rute dan eksekusi fungsi diisolasi ketat:
+*Role-Based Access Control* (RBAC) adalah metode pembatasan otorisasi sistem berdasarkan peran pengguna di dalam suatu organisasi. Dalam arsitektur Pinter Yuks, setiap pengguna diverifikasi identitasnya melalui token JSON Web Token (JWT) yang membawa klaim peran (*role claim*). Hak akses rute dan eksekusi fungsi diisolasi ketat:
 - **Admin**: Akses penuh ke master data, jadwal bimbingan, verifikasi akun, dan tata keuangan.
 - **Tutor**: Dibatasi hanya pada pengelolaan sesi kelas yang diajarkan, presensi siswa di kelasnya, materi ajar, dan nilai siswa.
 - **Siswa**: Hak baca jadwal kelas terdaftar, unduh modul materi, dan pantau tagihan pribadi.
@@ -235,13 +235,13 @@ Tahapan aktivitas pelaksanaan Waterfall:
 
 #### 3.2.1 Diagram Konteks (DFD Level 0)
 
-Diagram Konteks memetakan batasan sistem (*system boundary*) secara menyeluruh, memperlihatkan aliran informasi dua arah antara Sistem Informasi Bimbel Pintar Yuk dengan 4 entitas eksternal:
+Diagram Konteks memetakan batasan sistem (*system boundary*) secara menyeluruh, memperlihatkan aliran informasi dua arah antara Sistem Informasi Bimbel Pinter Yuks dengan 4 entitas eksternal:
 
 ```mermaid
 flowchart LR
     ADMIN["👨‍💼 Super Admin & Staf TU"]
     TUTOR["👨‍🏫 Tutor / Pengajar"]
-    SYSTEM(("🎓<br/><b>SISTEM INFORMASI<br/>BIMBEL PINTAR YUK</b><br/><i>(Level 0)</i>"))
+    SYSTEM(("🎓<br/><b>SISTEM INFORMASI<br/>BIMBEL PINTER YUKS</b><br/><i>(Level 0)</i>"))
     STUDENT["🧑‍🎓 Siswa"]
     PARENT["👨‍👩‍👦 Orang Tua / Wali"]
 
@@ -662,7 +662,7 @@ Running 16 tests using 4 workers
 ### 5.1 Kesimpulan
 
 Berdasarkan keseluruhan tahapan analisis, perancangan, implementasi, dan pengujian yang telah dilaksanakan, dapat disimpulkan bahwa:
-1. Sistem Informasi Bimbingan Belajar Berbasis Web **Pintar Yuk** berhasil dikembangkan untuk menjawab dan menuntaskan 5 kendala operasional utama bimbel konvensional di Kota Palu, meliputi: pengelolaan pendaftaran mandiri anti-bot, eliminasi jadwal bentrok, digitalisasi presensi terkunci audit 24 jam, distribusi materi ajar terpusat, serta pencatatan SPP transparan dengan penerbitan kwitansi digital resmi.
+1. Sistem Informasi Bimbingan Belajar Berbasis Web **Pinter Yuks** berhasil dikembangkan untuk menjawab dan menuntaskan 5 kendala operasional utama bimbel konvensional di Kota Palu, meliputi: pengelolaan pendaftaran mandiri anti-bot, eliminasi jadwal bentrok, digitalisasi presensi terkunci audit 24 jam, distribusi materi ajar terpusat, serta pencatatan SPP transparan dengan penerbitan kwitansi digital resmi.
 2. Pengadopsian arsitektur web modern berbasis **TanStack Start (React 19)** yang dipadukan dengan **Supabase PostgreSQL** dan **Drizzle ORM** menghasilkan perangkat lunak yang berkinerja tinggi, responsif, dan *type-safe* secara menyeluruh (*end-to-end type safety*).
 3. Pengujian sistem menggunakan metode gabungan *Black-Box Testing* dan *Automated End-to-End Testing* (Playwright) membuktikan bahwa seluruh 13 kebutuhan fungsional (FR-REG-01 s.d. FR-BILL-03) dan kebutuhan non-fungsional telah terpenuhi secara sempurna dengan tingkat keberhasilan uji 100%.
 

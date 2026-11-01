@@ -1,5 +1,5 @@
 # Spesifikasi Cetak Biru (Blueprint) Laporan Rancangan Rekayasa Perangkat Lunak
-## Sistem Informasi Bimbingan Belajar Berbasis Web — Pintar Yuk (Kota Palu)
+## Sistem Informasi Bimbingan Belajar Berbasis Web — Pinter Yuks (Kota Palu)
 
 ---
 
@@ -19,7 +19,7 @@
 
 ## Panduan Sistematika Laporan Rancangan
 
-Dokumen ini disusun sebagai panduan standar (*blueprint*) penulisan laporan rancangan proyek RPL Pintar Yuk. Sistematika laporan mengacu pada format standar tugas besar rekayasa perangkat lunak dengan pendekatan pemodelan **Hibrid (DFD + UML Sequence + ERD)** serta metode pengujian **Black-Box dipadukan dengan Otomasi E2E Playwright & Vitest**.
+Dokumen ini disusun sebagai panduan standar (*blueprint*) penulisan laporan rancangan proyek RPL Pinter Yuks. Sistematika laporan mengacu pada format standar tugas besar rekayasa perangkat lunak dengan pendekatan pemodelan **Hibrid (DFD + UML Sequence + ERD)** serta metode pengujian **Black-Box dipadukan dengan Otomasi E2E Playwright & Vitest**.
 
 ```
 STRUKTUR LAPORAN TUGAS BESAR RPL:
@@ -78,7 +78,7 @@ Bimbingan belajar (bimbel) di Kota Palu memegang peranan krusial dalam pendampin
 5. Bagaimana memfasilitasi verifikasi pembayaran SPP secara transparan dengan penerbitan kwitansi digital bernomor seri resmi?
 
 ### 1.3 Batasan Masalah
-1. Sistem diterapkan secara khusus untuk model bimbingan belajar tatap muka terpadu (*single-tenant*) lembaga Pintar Yuk di Kota Palu.
+1. Sistem diterapkan secara khusus untuk model bimbingan belajar tatap muka terpadu (*single-tenant*) lembaga Pinter Yuks di Kota Palu.
 2. Kapasitas rombongan belajar (rombel) dibatasi secara ketat maksimal 12 siswa per kelas demi menjaga rasio interaksi belajar.
 3. Hak akses pengguna diisolasi ketat ke dalam 4 peran: **Super Admin/TU**, **Tutor**, **Siswa**, dan **Orang Tua/Wali**.
 4. Pembayaran SPP menggunakan metode transfer bank/e-wallet dengan verifikasi manual bukti bayar oleh staf tata usaha (belum menggunakan *auto-settlement payment gateway* pihak ketiga berbayar).
@@ -170,13 +170,13 @@ flowchart TD
 ### 3.2 Pemodelan Aliran Data (Data Flow Diagram - DFD)
 
 #### 3.2.1 Diagram Konteks (DFD Level 0)
-Diagram Konteks memetakan batasan sistem (*boundary*) dan relasi 4 entitas eksternal dengan Sistem Informasi Bimbel Pintar Yuk.
+Diagram Konteks memetakan batasan sistem (*boundary*) dan relasi 4 entitas eksternal dengan Sistem Informasi Bimbel Pinter Yuks.
 
 ```mermaid
 flowchart LR
     ADMIN["👨‍💼 Super Admin & Staf TU"]
     TUTOR["👨‍🏫 Tutor / Pengajar"]
-    SYSTEM(("🎓<br/><b>SISTEM INFORMASI<br/>BIMBEL PINTAR YUK</b><br/><i>(Level 0)</i>"))
+    SYSTEM(("🎓<br/><b>SISTEM INFORMASI<br/>BIMBEL PINTER YUKS</b><br/><i>(Level 0)</i>"))
     STUDENT["🧑‍🎓 Siswa"]
     PARENT["👨‍👩‍👦 Orang Tua / Wali"]
 
@@ -499,7 +499,7 @@ Coverage    : Seluruh alur kritis transaksi berhasil lolos uji (Zero Regressions
 # BAB 5: PENUTUP
 
 ### 5.1 Kesimpulan
-1. Sistem Informasi Bimbingan Belajar Berbasis Web **Pintar Yuk** berhasil dirancang dan diimplementasikan untuk menyelesaikan 5 permasalahan klasik operasional bimbel di Kota Palu (pendaftaran, bentrok jadwal, distribusi materi, transparansi orang tua, dan penagihan SPP).
+1. Sistem Informasi Bimbingan Belajar Berbasis Web **Pinter Yuks** berhasil dirancang dan diimplementasikan untuk menyelesaikan 5 permasalahan klasik operasional bimbel di Kota Palu (pendaftaran, bentrok jadwal, distribusi materi, transparansi orang tua, dan penagihan SPP).
 2. Penerapan arsitektur modern berbasis TanStack Start (React 19) dan Supabase PostgreSQL menghasilkan aplikasi web yang tangguh, responsif, dan *type-safe* dari tingkat antarmuka hingga basis data.
 3. Fitur anti-bentrok jadwal terbukti efektif meniadakan *double booking* ruang dan tutor secara 100% pada tahap pengujian.
 4. Pengujian komprehensif menggunakan kombinasi Black-Box Testing dan Automated E2E Testing (Playwright) memverifikasi bahwa seluruh kebutuhan fungsional (FR-01 s.d. FR-13) berjalan sesuai spesifikasi rancangan.

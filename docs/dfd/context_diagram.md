@@ -1,6 +1,6 @@
-# Diagram Konteks (DFD Level 0) — Pintar Yuk Kota Palu
+# Diagram Konteks (DFD Level 0) — Pinter Yuks Kota Palu
 
-Diagram Konteks menggambarkan batasan sistem (*system boundary*) dan hubungan pertukaran informasi antara sistem informasi bimbingan belajar **Pintar Yuk** dengan entitas luar.
+Diagram Konteks menggambarkan batasan sistem (*system boundary*) dan hubungan pertukaran informasi antara sistem informasi bimbingan belajar **Pinter Yuks** dengan entitas luar.
 
 ---
 
@@ -16,7 +16,7 @@ flowchart LR
     end
 
     %% Sistem di Tengah
-    SYSTEM(("🎓<br/><b>SISTEM INFORMASI<br/>BIMBEL PINTAR YUK</b><br/><i>(Level 0)</i>"))
+    SYSTEM(("🎓<br/><b>SISTEM INFORMASI<br/>BIMBEL PINTER YUKS</b><br/><i>(Level 0)</i>"))
 
     %% Entitas Sisi Kanan: Peserta & Wali
     subgraph Pihak_Eksternal["Peserta & Wali"]

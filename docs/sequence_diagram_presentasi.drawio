@@ -5,7 +5,7 @@
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="hdr_tab1" value="&lt;div style=&quot;font-size: 16px; font-weight: bold; letter-spacing: 0.5px; color: #FFFFFF; font-family: Helvetica, Arial, sans-serif;&quot;&gt;SEQUENCE DIAGRAM: ALUR PENDAFTARAN SISWA BARU &amp;amp; PENETAPAN KELAS&lt;/div&gt;&lt;div style=&quot;font-size: 12px; color: #CBD5E1; margin-top: 4px; font-weight: normal; font-family: Helvetica, Arial, sans-serif;&quot;&gt;Sistem Informasi Bimbel Pintar Yuk &amp;bull; Alur Bisnis untuk Presentasi Non-Teknis&lt;/div&gt;" style="shape=rectangle;fillColor=#000000;strokeColor=#CB2957;strokeWidth=2;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="hdr_tab1" value="&lt;div style=&quot;font-size: 16px; font-weight: bold; letter-spacing: 0.5px; color: #FFFFFF; font-family: Helvetica, Arial, sans-serif;&quot;&gt;SEQUENCE DIAGRAM: ALUR PENDAFTARAN SISWA BARU &amp;amp; PENETAPAN KELAS&lt;/div&gt;&lt;div style=&quot;font-size: 12px; color: #CBD5E1; margin-top: 4px; font-weight: normal; font-family: Helvetica, Arial, sans-serif;&quot;&gt;Sistem Informasi Bimbel Pinter Yuks &amp;bull; Alur Bisnis untuk Presentasi Non-Teknis&lt;/div&gt;" style="shape=rectangle;fillColor=#000000;strokeColor=#CB2957;strokeWidth=2;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="50" y="30" width="1100" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="part_parent" value="&lt;div style=&quot;font-weight: bold; font-size: 13px; color: #FFFFFF;&quot;&gt;Orang Tua / Calon Siswa&lt;/div&gt;&lt;div style=&quot;font-size: 11px; color: #94A3B8;&quot;&gt;(Pengguna Eksternal)&lt;/div&gt;" style="shape=rectangle;fillColor=#0F172A;strokeColor=#64748B;strokeWidth=1.5;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -17,7 +17,7 @@
             <mxPoint x="200" y="780" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="part_system" value="&lt;div style=&quot;font-weight: bold; font-size: 13px; color: #FFFFFF;&quot;&gt;Portal Web Pintar Yuk&lt;/div&gt;&lt;div style=&quot;font-size: 11px; color: #CB2957; font-weight: bold;&quot;&gt;(Sistem Bimbel)&lt;/div&gt;" style="shape=rectangle;fillColor=#000000;strokeColor=#CB2957;strokeWidth=2;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="part_system" value="&lt;div style=&quot;font-weight: bold; font-size: 13px; color: #FFFFFF;&quot;&gt;Portal Web Pinter Yuks&lt;/div&gt;&lt;div style=&quot;font-size: 11px; color: #CB2957; font-weight: bold;&quot;&gt;(Sistem Bimbel)&lt;/div&gt;" style="shape=rectangle;fillColor=#000000;strokeColor=#CB2957;strokeWidth=2;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="470" y="120" width="220" height="50" as="geometry"/>
         </mxCell>
         <mxCell id="line_system" value="" style="edgeStyle=none;html=1;dashed=1;strokeColor=#CB2957;strokeWidth=1.5;endArrow=none;" edge="1" parent="1">
@@ -161,7 +161,7 @@
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
-        <mxCell id="hdr_tab2" value="&lt;div style=&quot;font-size: 16px; font-weight: bold; letter-spacing: 0.5px; color: #FFFFFF; font-family: Helvetica, Arial, sans-serif;&quot;&gt;SEQUENCE DIAGRAM: ALUR TAGIHAN SPP, PEMBAYARAN &amp;amp; PENERBITAN KWITANSI&lt;/div&gt;&lt;div style=&quot;font-size: 12px; color: #CBD5E1; margin-top: 4px; font-weight: normal; font-family: Helvetica, Arial, sans-serif;&quot;&gt;Sistem Informasi Bimbel Pintar Yuk &amp;bull; Tata Kelola Keuangan Transparan untuk Presentasi Non-Teknis&lt;/div&gt;" style="shape=rectangle;fillColor=#000000;strokeColor=#CB2957;strokeWidth=2;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="hdr_tab2" value="&lt;div style=&quot;font-size: 16px; font-weight: bold; letter-spacing: 0.5px; color: #FFFFFF; font-family: Helvetica, Arial, sans-serif;&quot;&gt;SEQUENCE DIAGRAM: ALUR TAGIHAN SPP, PEMBAYARAN &amp;amp; PENERBITAN KWITANSI&lt;/div&gt;&lt;div style=&quot;font-size: 12px; color: #CBD5E1; margin-top: 4px; font-weight: normal; font-family: Helvetica, Arial, sans-serif;&quot;&gt;Sistem Informasi Bimbel Pinter Yuks &amp;bull; Tata Kelola Keuangan Transparan untuk Presentasi Non-Teknis&lt;/div&gt;" style="shape=rectangle;fillColor=#000000;strokeColor=#CB2957;strokeWidth=2;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="50" y="30" width="1200" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="part2_admin" value="&lt;div style=&quot;font-weight: bold; font-size: 13px; color: #FFFFFF;&quot;&gt;Staf Tata Usaha (Admin)&lt;/div&gt;&lt;div style=&quot;font-size: 11px; color: #94A3B8;&quot;&gt;(Penerbit &amp;amp; Verifikator)&lt;/div&gt;" style="shape=rectangle;fillColor=#0F172A;strokeColor=#64748B;strokeWidth=1.5;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -173,7 +173,7 @@
             <mxPoint x="180" y="850" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="part2_system" value="&lt;div style=&quot;font-weight: bold; font-size: 13px; color: #FFFFFF;&quot;&gt;Portal Web Pintar Yuk&lt;/div&gt;&lt;div style=&quot;font-size: 11px; color: #CB2957; font-weight: bold;&quot;&gt;(Sistem Keuangan Bimbel)&lt;/div&gt;" style="shape=rectangle;fillColor=#000000;strokeColor=#CB2957;strokeWidth=2;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="part2_system" value="&lt;div style=&quot;font-weight: bold; font-size: 13px; color: #FFFFFF;&quot;&gt;Portal Web Pinter Yuks&lt;/div&gt;&lt;div style=&quot;font-size: 11px; color: #CB2957; font-weight: bold;&quot;&gt;(Sistem Keuangan Bimbel)&lt;/div&gt;" style="shape=rectangle;fillColor=#000000;strokeColor=#CB2957;strokeWidth=2;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="380" y="120" width="220" height="50" as="geometry"/>
         </mxCell>
         <mxCell id="line2_system" value="" style="edgeStyle=none;html=1;dashed=1;strokeColor=#CB2957;strokeWidth=1.5;endArrow=none;" edge="1" parent="1">

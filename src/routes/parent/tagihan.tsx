@@ -326,7 +326,7 @@ function ParentBillingPage() {
                 7123-4567-89
               </span>
               <span className="text-[11px] text-[#555555] block mt-0.5">
-                a.n. Pintar Yuk
+                a.n. Pinter Yuks
               </span>
             </div>
 

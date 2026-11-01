@@ -1,6 +1,6 @@
-# Data Flow Diagram (DFD) Level 2 — Pintar Yuk Kota Palu
+# Data Flow Diagram (DFD) Level 2 — Pinter Yuks Kota Palu
 
-Dokumen ini membedah setiap proses operasional dari DFD Level 1 menjadi sub-proses detail (Level 2) yang tersinkronisasi 100% dengan arsitektur kode dan skema basis data **Pintar Yuk**.
+Dokumen ini membedah setiap proses operasional dari DFD Level 1 menjadi sub-proses detail (Level 2) yang tersinkronisasi 100% dengan arsitektur kode dan skema basis data **Pinter Yuks**.
 
 ---
 
@@ -246,4 +246,4 @@ flowchart LR
 * `5.3`: Staf TU meninjau bukti transfer:
   * Jika bukti tidak valid: Status tagihan dan pembayaran berubah menjadi `ditolak` disertai `rejected_reason` agar pengunggah dapat memperbaikinya.
   * Jika bukti sah: Status tagihan dan pembayaran berubah menjadi `lunas`, mencatat `verified_by` dan `verified_at`.
-* `5.4`: Sistem men-generate nomor kwitansi resmi unik `KWT-YYYYMM-XXXX`. Lembar kwitansi digital resmi berstempel Pintar Yuk dapat dicetak atau diunduh oleh siswa dan orang tua.
+* `5.4`: Sistem men-generate nomor kwitansi resmi unik `KWT-YYYYMM-XXXX`. Lembar kwitansi digital resmi berstempel Pinter Yuks dapat dicetak atau diunduh oleh siswa dan orang tua.

@@ -294,7 +294,7 @@ Halaman publik terdiri dari **5 blok utama** di atas permukaan hitam penutup (CT
 
 \`\`\`text
 ┌────────────────────────────────────────────────────────────────────┐
-│ Pintar Yuk            Program  Untuk Orang Tua  Cara Daftar  FAQ   │
+│ Pinter Yuks           Program  Untuk Orang Tua  Cara Daftar  FAQ   │
 │                                                  Masuk   [Daftar]  │  header (border 2px hitam)
 ├────────────────────────────────────────────────────────────────────┤
 │ Bimbingan belajar tatap muka     │ █ JADWAL KELAS SORE · PALU █    │  1. HERO 2 kolom:
@@ -338,13 +338,13 @@ Halaman publik terdiri dari **5 blok utama** di atas permukaan hitam penutup (CT
 │ █ COBA SATU KELAS DULU. GRATIS.                                  █ │  CTA + FOOTER hitam
 │ █ Ringkasan singkat          [Daftar sekarang →] [Tanya via WA]  █ │
 │ █ ────────────────────────────────────────────────────────────── █ │
-│ █ Pintar Yuk        │ Program │ Masuk (4 peran) │ Kontak         █ │
+│ █ Pinter Yuks       │ Program │ Masuk (4 peran) │ Kontak         █ │
 └────────────────────────────────────────────────────────────────────┘
 \`\`\`
 
 ### 7.1 Header
 
-- **Logo:** Teks \`Pintar Yuk\` (\`Archivo\` condensed, \`Pintar\` tebal 800, \`Yuk\` 500), tanpa kotak ikon/monogram.
+- **Logo:** Teks \`Pinter Yuks\` (\`Archivo\` condensed, \`Pinter\` tebal 800, \`Yuks\` 500), tanpa kotak ikon/monogram.
 - **Navigasi desktop:** 4 tautan (\`Program\`, \`Untuk Orang Tua\`, \`Cara Daftar\`, \`FAQ\`) dengan garis bawah merah \`2px\` saat hover.
 - **Aksi kanan:** \`Masuk\` sebagai tautan teks dan \`Daftar\` sebagai tombol hitam (\`.btn-primary\`).
 - **Mobile (\`<= 900px\`):** Tombol hamburger berbingkai hitam \`2px\` membuka drawer kanan berlatar \`#EEEEEE\`.

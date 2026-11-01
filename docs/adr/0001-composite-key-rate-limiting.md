@@ -1,6 +1,6 @@
 # Composite-Key Rate Limiting untuk Jaringan IP Bersama (Shared Wi-Fi & CGNAT)
 
-Pintar Yuk menerapkan pembatasan laju permintaan (*rate limiting*) berlapis berbasis **Composite Subject Key** (kombinasi Cookie Sesi Perangkat `__py_rl_sid` / Fingerprint Perangkat + Identitas Target Akun + Plafon Darurat IP Longgar) pada seluruh endpoint Server Functions, alih-alih menggunakan IP Address murni pada halaman publik. Keputusan ini diambil karena puluhan siswa, tutor, dan orang tua sering mengakses sistem secara bersamaan dari satu jaringan Wi-Fi gedung bimbingan belajar/sekolah yang sama atau melalui jaringan seluler berbasis CGNAT yang berbagi satu IP publik tunggal.
+Pinter Yuks menerapkan pembatasan laju permintaan (*rate limiting*) berlapis berbasis **Composite Subject Key** (kombinasi Cookie Sesi Perangkat `__py_rl_sid` / Fingerprint Perangkat + Identitas Target Akun + Plafon Darurat IP Longgar) pada seluruh endpoint Server Functions, alih-alih menggunakan IP Address murni pada halaman publik. Keputusan ini diambil karena puluhan siswa, tutor, dan orang tua sering mengakses sistem secara bersamaan dari satu jaringan Wi-Fi gedung bimbingan belajar/sekolah yang sama atau melalui jaringan seluler berbasis CGNAT yang berbagi satu IP publik tunggal.
 
 ## Storage Backend & Serverless Scaling
 

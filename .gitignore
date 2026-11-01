@@ -21,6 +21,7 @@ playwright-report/
 blob-report/
 playwright/.cache/
 .playwright-cli/
+.playwright-mcp/
 
 # Tools & IDE
 .codegraph/
@@ -42,3 +43,4 @@ pnpm-debug.log*
 # OS temporary files
 .DS_Store
 Thumbs.db
+.vercel
