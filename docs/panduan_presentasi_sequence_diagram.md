@@ -1,4 +1,4 @@
-# Panduan Presentasi Sequence Diagram Alur Sistem (Pintar Yuk)
+# Panduan Presentasi Sequence Diagram Alur Sistem (Pinter Yuks)
 
 Dokumen ini adalah pegangan narasi (*talking points*) dan panduan visual bagi presenter untuk membawakan **Sequence Diagram Alur Sistem** kepada audiens non-teknis (stakeholder, pimpinan yayasan/lembaga, dosen penguji, orang tua murid, atau staf operasional).
 
@@ -27,7 +27,7 @@ Diagram visual tersimpan dalam berkas Draw.io multi-halaman:
 > **Tujuan Slide**: Menjelaskan bagaimana sistem mempermudah orang tua mendaftar secara mandiri, melindungi sistem dari pendaftaran palsu (*spam/bot*), serta membantu tata usaha mengatur kuota kelas agar tidak over-kapasitas.
 
 ### Narasi Pembuka:
-> *"Bapak/Ibu sekalian, diagram pertama ini menggambarkan proses penerimaan siswa baru di Bimbel Pintar Yuk, dari saat orang tua mengisi formulir hingga anak resmi terdaftar di dalam kelas belajar."*
+> *"Bapak/Ibu sekalian, diagram pertama ini menggambarkan proses penerimaan siswa baru di Bimbel Pinter Yuks, dari saat orang tua mengisi formulir hingga anak resmi terdaftar di dalam kelas belajar."*
 
 ### Penjelasan Per Langkah:
 
@@ -40,7 +40,7 @@ Diagram visual tersimpan dalam berkas Draw.io multi-halaman:
 * **Langkah 4 (Notifikasi ke Tata Usaha)**:
   * *"Keempat, staf tata usaha di kantor bimbel menerima notifikasi waktu-nyata di dashboard mereka bahwa ada pendaftaran baru yang siap ditinjau."*
 * **Langkah 5 (Pengecekan Kuota Kelas)**:
-  * *"Kelima, staf admin memeriksa berkas dan mencocokkannya dengan ketersediaan kursi di rombel kelas. Di Pintar Yuk, demi kualitas belajar prima, kuota per kelas dibatasi ketat maksimal 12 siswa."*
+  * *"Kelima, staf admin memeriksa berkas dan mencocokkannya dengan ketersediaan kursi di rombel kelas. Di Pinter Yuks, demi kualitas belajar prima, kuota per kelas dibatasi ketat maksimal 12 siswa."*
 
 ### Kotak Keputusan (alt):
 * **Skenario Disetujui (Jalur Sukses)**:
@@ -66,13 +66,13 @@ Diagram visual tersimpan dalam berkas Draw.io multi-halaman:
 * **Langkah 4 & 5 (Pembayaran ke Bank)**:
   * *"Orang tua membayar lewat transfer bank atau mobile banking pilihan mereka (Langkah 4), lalu mendapatkan struk bukti transfer (Langkah 5)."*
 * **Langkah 6 & 7 (Unggah Bukti Transfer)**:
-  * *"Orang tua tidak perlu repot mengirim struk via WhatsApp ke staf. Cukup foto struk dan unggah langsung ke portal Pintar Yuk (Langkah 6). Status tagihan seketika berubah menjadi 'Menunggu Verifikasi' (Langkah 7)."*
+  * *"Orang tua tidak perlu repot mengirim struk via WhatsApp ke staf. Cukup foto struk dan unggah langsung ke portal Pinter Yuks (Langkah 6). Status tagihan seketika berubah menjadi 'Menunggu Verifikasi' (Langkah 7)."*
 * **Langkah 8 & 9 (Pemeriksaan Admin)**:
   * *"Staf admin menerima pemberitahuan (Langkah 8), lalu membuka foto bukti bayar dan mencocokkannya dengan mutasi rekening bimbel (Langkah 9)."*
 
 ### Kotak Keputusan (alt):
 * **Skenario Bukti Sah / Lunas**:
-  * *"Saat admin mengonfirmasi dana telah masuk (Langkah 10a), sistem otomatis mengubah tagihan menjadi LUNAS dan menerbitkan lembar Kwitansi Digital Resmi (KWT-XXXX) berstempel resmi Pintar Yuk (Langkah 11a). Orang tua langsung dapat mengunduh atau mencetak kwitansi tersebut kapan saja sebagai arsip sah (Langkah 12a)."*
+  * *"Saat admin mengonfirmasi dana telah masuk (Langkah 10a), sistem otomatis mengubah tagihan menjadi LUNAS dan menerbitkan lembar Kwitansi Digital Resmi (KWT-XXXX) berstempel resmi Pinter Yuks (Langkah 11a). Orang tua langsung dapat mengunduh atau mencetak kwitansi tersebut kapan saja sebagai arsip sah (Langkah 12a)."*
 * **Skenario Bukti Tidak Valid / Salah Nominal**:
   * *"Jika nominal transfer kurang atau foto struk tidak terbaca (Langkah 10b), admin memberikan catatan revisi (Langkah 11b). Orang tua langsung diberitahu dan disediakan tombol untuk mengunggah ulang bukti yang benar (Langkah 12b) tanpa harus mengulang proses dari awal."*
 
@@ -83,4 +83,4 @@ Diagram visual tersimpan dalam berkas Draw.io multi-halaman:
 1. **Jika ditanya: *'Mengapa tidak pakai payment gateway otomatis (seperti Midtrans/Xendit)?'***
    * *Jawaban*: Sesuai hasil survei operasional bimbel lokal di Kota Palu, mayoritas orang tua lebih terbiasa dan nyaman dengan metode transfer rekening langsung (BCA/Mandiri/BRI) tanpa biaya admin tambahan transaksi pihak ketiga. Sistem kami menyediakan jembatan verifikasi semi-otomatis yang aman, cepat, dan hemat biaya operasional.
 2. **Jika ditanya: *'Bagaimana jika ada orang tua yang punya 2 atau 3 anak di bimbel ini?'***
-   * *Jawaban*: Sistem Pintar Yuk dilengkapi fitur *Multi-Child Switcher*. Orang tua hanya perlu satu akun untuk memantau pendaftaran, presensi, rapor, maupun tagihan SPP seluruh anaknya secara terpisah tanpa perlu keluar-masuk (*logout*) akun.
+   * *Jawaban*: Sistem Pinter Yuks dilengkapi fitur *Multi-Child Switcher*. Orang tua hanya perlu satu akun untuk memantau pendaftaran, presensi, rapor, maupun tagihan SPP seluruh anaknya secara terpisah tanpa perlu keluar-masuk (*logout*) akun.

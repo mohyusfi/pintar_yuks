@@ -1,13 +1,13 @@
 # Product Requirements Document (PRD)
 
-## Sistem Informasi Bimbingan Belajar Berbasis Web — Pintar Yuk
+## Sistem Informasi Bimbingan Belajar Berbasis Web — Pinter Yuks
 
 ---
 
 ### Informasi Dokumen
 
 - **Nama Proyek**: Sistem Informasi Bimbingan Belajar (Bimbel) Berbasis Web
-- **Jenama Resmi**: Pintar Yuk
+- **Jenama Resmi**: Pinter Yuks
 - **Tagline**: *"Pahami Konsepnya, Bukan Sekadar Hafal Rumusnya"*
 - **Mata Kuliah**: Rekayasa Perangkat Lunak (RPL)
 - **Institusi**: Program Studi S1 Teknik Informatika, Fakultas Teknik, Universitas Tadulako, Palu
@@ -32,7 +32,7 @@ Di Kota Palu, mayoritas operasional lembaga bimbingan belajar (bimbel) konvensio
 
 ### 1.2 Tujuan Produk
 
-Membangun platform sistem informasi berbasis web terpadu (*single-tenant*) untuk lembaga bimbingan belajar **Pintar Yuk** di Kota Palu yang menghubungkan seluruh siklus operasional: **pendaftaran mandiri anti-bot**, **penjadwalan kelas anti-bentrok**, **presensi sesi digital dengan kunci audit 24 jam**, **distribusi materi digital & slide PPTX interaktif**, **rapor evaluasi progres belajar**, dan **verifikasi pembayaran SPP serta penerbitan kwitansi digital resmi** secara transparan.
+Membangun platform sistem informasi berbasis web terpadu (*single-tenant*) untuk lembaga bimbingan belajar **Pinter Yuks** di Kota Palu yang menghubungkan seluruh siklus operasional: **pendaftaran mandiri anti-bot**, **penjadwalan kelas anti-bentrok**, **presensi sesi digital dengan kunci audit 24 jam**, **distribusi materi digital & slide PPTX interaktif**, **rapor evaluasi progres belajar**, dan **verifikasi pembayaran SPP serta penerbitan kwitansi digital resmi** secara transparan.
 
 ---
 
@@ -76,7 +76,7 @@ Sistem memiliki 4 aktor pengguna utama dengan hak akses terisolasi (RBAC), ditam
 
 | Peran (Role) | Deskripsi Utama | Hak Akses Fitur Utama |
 | :--- | :--- | :--- |
-| **Super Admin**<br>*(Pimpinan / Kepala Cabang)* | Pemegang otoritas tertinggi tata kelola lembaga Pintar Yuk | - Seluruh hak akses Admin.<br>- Kelola Akun Staf Tata Usaha (`/admin/staf`): tambah staf baru, ubah kontak, dan aktif/nonaktifkan akun staf.<br>- Tinjauan menyeluruh laporan keuangan agregat dan pengawasan seluruh rombel. |
+| **Super Admin**<br>*(Pimpinan / Kepala Cabang)* | Pemegang otoritas tertinggi tata kelola lembaga Pinter Yuks | - Seluruh hak akses Admin.<br>- Kelola Akun Staf Tata Usaha (`/admin/staf`): tambah staf baru, ubah kontak, dan aktif/nonaktifkan akun staf.<br>- Tinjauan menyeluruh laporan keuangan agregat dan pengawasan seluruh rombel. |
 | **Admin**<br>*(Staf Tata Usaha)* | Pengelola operasional harian bimbingan belajar | - Verifikasi Formulir Pendaftaran Siswa Baru & Penetapan Rombel (*Class Plotting*).<br>- Kelola Master Data (Siswa, Tutor, Orang Tua, Ruangan, Program Belajar, Rombel Kelas).<br>- Manajemen Jadwal Bimbingan Mingguan dengan Engine Anti-Bentrok.<br>- Penerbitan Tagihan SPP, Verifikasi Bukti Bayar, & Penerbitan Kwitansi Digital Resmi.<br>- Siaran Pengumuman Lembaga ke Seluruh Pengguna Terdaftar. |
 | **Tutor (Pengajar)** | Tenaga pendidik bimbingan belajar | - Akses Jadwal Mengajar Pribadi mingguan/harian.<br>- Checklist Presensi Sesi Digital dengan Grace Period koreksi 24 jam.<br>- Unggah Modul Pelajaran (PDF) dan Slide Presentasi Interaktif (PPTX).<br>- Input Nilai Evaluasi (Try Out, Kuis, Tugas) dengan kalkulasi rata-rata rombel otomatis dan catatan kualitatif. |
 | **Siswa** | Peserta bimbingan belajar terdaftar | - Akses Jadwal Bimbingan Mingguan pribadi.<br>- Pratinjau Interaktif & Unduh Modul Belajar (PDF & PPTX).<br>- Pantau Riwayat Presensi & Persentase Kehadiran Belajar.<br>- Lihat Rekap Nilai Evaluasi & Catatan Umpan Balik Tutor.<br>- Portal Tagihan SPP: Cek tagihan, unggah bukti transfer, & unduh kwitansi lunas resmi. |
@@ -106,7 +106,7 @@ Sistem memiliki 4 aktor pengguna utama dengan hak akses terisolasi (RBAC), ditam
 ### 4.2 Modul Penjadwalan Bimbingan Anti-Bentrok (SCHED)
 
 - **SCHED-01: Manajemen Master Ruangan, Program & Rombel Kelas**
-  - Admin dapat mendefinisikan ruang fisik (misal: Ruang Pintar 1, Ruang Palu-1) beserta kapasitas maksimal kursi (10–12 siswa).
+  - Admin dapat mendefinisikan ruang fisik (misal: Ruang Pinter 1, Ruang Palu-1) beserta kapasitas maksimal kursi (10–12 siswa).
   - Admin dapat membentuk rombongan belajar (*classes*) yang terikat pada paket program belajar dan wali tutor penanggung jawab.
 - **SCHED-02: Conflict Detection Engine & Overdue Protection**
   - *Logika Validasi Anti-Bentrok*:
@@ -166,7 +166,7 @@ Sistem memiliki 4 aktor pengguna utama dengan hak akses terisolasi (RBAC), ditam
   - **Penolakan (Reject)**:
     - Status berubah menjadi `ditolak` disertai pencatatan alasan penolakan resmi (`rejected_reason`).
     - Siswa dan orang tua dapat membaca alasan penolakan dan mengunggah ulang bukti bayar yang benar.
-  - Tagihan yang telah lunas menyediakan tombol cetak/unduh lembar Kwitansi Digital Resmi berstempel Pintar Yuk lengkap dengan nomor kwitansi, rincian biaya, dan tanda tangan digital tata usaha.
+  - Tagihan yang telah lunas menyediakan tombol cetak/unduh lembar Kwitansi Digital Resmi berstempel Pinter Yuks lengkap dengan nomor kwitansi, rincian biaya, dan tanda tangan digital tata usaha.
 
 ### 4.6 Modul Notifikasi Waktu-Nyata (NOTIF)
 
@@ -182,7 +182,7 @@ Sistem memiliki 4 aktor pengguna utama dengan hak akses terisolasi (RBAC), ditam
 
 ### 5.1 Diagram Konteks (DFD Level 0)
 
-Diagram Konteks menggambarkan batasan sistem (*system boundary*) Pintar Yuk dengan tata letak horizontal terisolasi:
+Diagram Konteks menggambarkan batasan sistem (*system boundary*) Pinter Yuks dengan tata letak horizontal terisolasi:
 
 ```mermaid
 flowchart LR
@@ -194,7 +194,7 @@ flowchart LR
     end
 
     %% Sistem di Tengah
-    SYSTEM(("🎓<br/><b>SISTEM INFORMASI<br/>BIMBEL PINTAR YUK</b><br/><i>(Level 0)</i>"))
+    SYSTEM(("🎓<br/><b>SISTEM INFORMASI<br/>BIMBEL PINTER YUKS</b><br/><i>(Level 0)</i>"))
 
     %% Pengguna di Kanan
     subgraph Pihak_Eksternal["Peserta & Wali"]
@@ -570,7 +570,7 @@ Mengacu pada linimasa pengembangan proyek rekayasa perangkat lunak:
 
 ```mermaid
 gantt
-    title Roadmap Pengembangan Sistem Informasi Bimbel Pintar Yuk (SDLC Waterfall)
+    title Roadmap Pengembangan Sistem Informasi Bimbel Pinter Yuks (SDLC Waterfall)
     dateFormat  YYYY-MM-DD
     section M1: Analisis Kebutuhan
     Wawancara & Baseline PRD v1.0         :done, m1, 2026-03-01, 14d
@@ -583,7 +583,7 @@ gantt
     section M5: Integrasi & Pengujian
     Testing Anti-Bentrok, UAT & Fix Bug   :done, m5, after m4, 14d
     section M6: Sinkronisasi Dokumen & Live
-    PRD Baseline v2.0 & Rebranding Pintar Yuk :active, m6, after m5, 7d
+    PRD Baseline v2.0 & Rebranding Pinter Yuks :active, m6, after m5, 7d
 ```
 
 | Milestone | Kegiatan Utama | Durasi | Luaran (Deliverables) |
@@ -593,7 +593,7 @@ gantt
 | **M3** (Minggu 5-7) | Backend & Database | 3 Minggu | PostgreSQL DB Supabase, Skema Drizzle ORM, RLS, Storage Buckets |
 | **M4** (Minggu 8-9) | Frontend TanStack | 2 Minggu | Halaman Web Responsif untuk 4 Peran Pengguna + Super Admin |
 | **M5** (Minggu 10-11) | Integrasi & Uji Sistem | 2 Minggu | Verifikasi Anti-bentrok, Grace Period Presensi, End-to-End Test |
-| **M6** (Minggu 12) | Finalisasi & Rebranding | 1 Minggu | Aplikasi live Pintar Yuk, PRD Baseline v2.0 tersinkronisasi penuh |
+| **M6** (Minggu 12) | Finalisasi & Rebranding | 1 Minggu | Aplikasi live Pinter Yuks, PRD Baseline v2.0 tersinkronisasi penuh |
 
 ---
 
@@ -601,6 +601,6 @@ gantt
 
 Seluruh berkas diagram aliran data pendukung telah diselaraskan pada direktori `dfd/`:
 
-- `dfd/context_diagram.md`: Diagram Konteks Level 0 entitas Pintar Yuk beserta narasi aliran data.
+- `dfd/context_diagram.md`: Diagram Konteks Level 0 entitas Pinter Yuks beserta narasi aliran data.
 - `dfd/dfd_level_1.md`: Dekomposisi proses 1.0 s/d 5.0 beserta kamus data 7 data stores.
 - `dfd/dfd_level_2.md`: Dekomposisi sub-proses detail (1.x s/d 5.x) bebas garis bertumpuk.

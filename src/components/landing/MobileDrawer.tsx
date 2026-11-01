@@ -40,11 +40,12 @@ export function MobileDrawer({
         className={cn('mobile-drawer', isOpen && 'active')}
         role="dialog"
         aria-label="Menu"
-        aria-modal={isOpen}
+        aria-modal={isOpen ? 'true' : 'false'}
+        aria-hidden={!isOpen}
       >
         <div className="mobile-drawer-header">
           <span className="lp-logo">
-            Pintar <span>Yuk</span>
+            Pinter <span>Yuks</span>
           </span>
           <button
             type="button"

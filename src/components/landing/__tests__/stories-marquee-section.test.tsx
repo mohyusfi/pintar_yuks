@@ -74,6 +74,14 @@ describe('StoriesMarqueeSection — Testimoni Poster Kontras Tinggi', () => {
     // Tidak boleh ada focus-within pada marquee track agar animasi tidak berhenti permanen seusai klik tombol kartu
     expect(landingCss).not.toContain('.lp-marquee-track:focus-within')
 
+    // Tidak boleh menggunakan body:has([role="dialog"]) mentah yang membekukan animasi akibat drawer tersembunyi
+    expect(landingCss).not.toMatch(/body:has\(\[role="dialog"\]\)\s*\.lp-marquee-track/)
+    expect(landingCss).toContain('body:has([role="dialog"][aria-modal="true"]) .lp-marquee-track')
+
+    // Optimasi performa hardware acceleration dan loop mulus
+    expect(landingCss).toContain('backface-visibility: hidden;')
+    expect(landingCss).toContain('padding-right: var(--space-4);')
+
     // Pewarnaan section menyatu dengan kanvas utama var(--background) dan kartu memakai var(--surface)
     expect(landingCss).toMatch(/\.lp-stories-section\s*\{[\s\S]*?background:\s*var\(--background\)/)
     expect(landingCss).toMatch(/\.lp-story-card\s*\{[\s\S]*?background:\s*var\(--surface\)/)

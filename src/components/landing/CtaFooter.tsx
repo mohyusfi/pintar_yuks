@@ -63,7 +63,7 @@ export function CtaFooter({ onOpenRegister }: CtaFooterProps) {
         <div className="lp-footer-grid">
           <div>
             <Link to="/" className="lp-logo">
-              Pintar <span>Yuk</span>
+              Pinter <span>Yuks</span>
             </Link>
             <p>
               Lembaga pembelajaran tatap muka untuk SD, SMP, SMA, dan persiapan UTBK-SNBT di Kota Palu, Sulawesi Tengah.
@@ -123,7 +123,7 @@ export function CtaFooter({ onOpenRegister }: CtaFooterProps) {
         </div>
 
         <div className="lp-footer-bottom">
-          © 2026 Pintar Yuk, Kota Palu.
+          © 2026 Pinter Yuks, Kota Palu.
         </div>
       </footer>
     </div>

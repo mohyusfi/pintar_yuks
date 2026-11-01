@@ -40,7 +40,7 @@ export function Header({ onOpenRegister, onToggleMobileMenu }: HeaderProps) {
     <header className="lp-header">
       <div className="container lp-header-inner">
         <Link to="/" className="lp-logo">
-          Pintar <span>Yuk</span>
+          Pinter <span>Yuks</span>
         </Link>
 
         <nav className="lp-nav" aria-label="Navigasi utama">

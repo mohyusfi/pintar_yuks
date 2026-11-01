@@ -1,6 +1,6 @@
-# Data Flow Diagram (DFD) Level 1 — Pintar Yuk Kota Palu
+# Data Flow Diagram (DFD) Level 1 — Pinter Yuks Kota Palu
 
-DFD Level 1 mendekomposisi sistem informasi bimbingan belajar **Pintar Yuk** menjadi **5 Proses Fungsional Utama** dan **7 Data Stores**.
+DFD Level 1 mendekomposisi sistem informasi bimbingan belajar **Pinter Yuks** menjadi **5 Proses Fungsional Utama** dan **7 Data Stores**.
 
 ---
 

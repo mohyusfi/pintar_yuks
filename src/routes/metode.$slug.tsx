@@ -34,11 +34,11 @@ export const Route = createFileRoute('/metode/$slug')({
   head: ({ loaderData }) => {
     const method = loaderData?.method
     const title = method
-      ? `${method.title} — Pintar Yuk Palu`
-      : 'Metode Belajar — Pintar Yuk'
+      ? `${method.title} — Pinter Yuks Palu`
+      : 'Metode Belajar — Pinter Yuks'
     const desc = method
       ? method.heroLead
-      : 'Metodologi bimbingan belajar tatap muka terarah di Pintar Yuk Kota Palu.'
+      : 'Metodologi bimbingan belajar tatap muka terarah di Pinter Yuks Kota Palu.'
     return {
       meta: [
         { title },
@@ -205,7 +205,7 @@ function LearningMethodDetailPage() {
                 <h2 className="lp-h2">Bagaimana metode ini dijalankan di dalam kelas?</h2>
               </div>
               <p>
-                Klik setiap tahapan di bawah untuk melihat alur pendampingan tutor Pintar Yuk bersama siswa secara langkah demi langkah.
+                Klik setiap tahapan di bawah untuk melihat alur pendampingan tutor Pinter Yuks bersama siswa secara langkah demi langkah.
               </p>
             </div>
 
@@ -324,10 +324,10 @@ function LearningMethodDetailPage() {
                 <span className="block mb-2 text-xs font-mono font-bold uppercase tracking-wider text-[#CB2957]">
                   Perbandingan Nyata
                 </span>
-                <h2 className="lp-h2">Cara belajar konvensional vs Metode Pintar Yuk</h2>
+                <h2 className="lp-h2">Cara belajar konvensional vs Metode Pinter Yuks</h2>
               </div>
               <p>
-                Lihat perbedaan mendasar antara pola belajar hafalan pasif dengan pembiasaan nalar aktif di kelas Pintar Yuk.
+                Lihat perbedaan mendasar antara pola belajar hafalan pasif dengan pembiasaan nalar aktif di kelas Pinter Yuks.
               </p>
             </div>
 
@@ -337,7 +337,7 @@ function LearningMethodDetailPage() {
                   <tr>
                     <th style={{ width: '25%' }}>Aspek Belajar</th>
                     <th style={{ width: '37.5%' }}>Cara Konvensional / Hafalan</th>
-                    <th style={{ width: '37.5%' }}>Pendekatan Pintar Yuk</th>
+                    <th style={{ width: '37.5%' }}>Pendekatan Pinter Yuks</th>
                   </tr>
                 </thead>
                 <tbody>

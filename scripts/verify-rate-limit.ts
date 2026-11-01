@@ -1,5 +1,5 @@
 /**
- * Pintar Yuk — Script Verifikasi Rate Limiting & Proteksi DDoS
+ * Pinter Yuks — Script Verifikasi Rate Limiting & Proteksi DDoS
  * Menjalankan simulasi penyerangan dan pembuktian anti-pemblokiran Wi-Fi bersama
  * pada backend Upstash Redis Serverless & In-Memory Fallback.
  *
@@ -10,7 +10,7 @@ import { rateLimitService } from '../src/server/services/rate-limit.service.ts'
 
 async function runVerification() {
   console.log('======================================================================')
-  console.log(' [VERIFIKASI] PINTAR YUK — PENGUJIAN RATE LIMIT UPSTASH REDIS')
+  console.log(' [VERIFIKASI] PINTER YUKS — PENGUJIAN RATE LIMIT UPSTASH REDIS')
   console.log('======================================================================\n')
 
   rateLimitService.resetStore()

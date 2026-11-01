@@ -14,7 +14,7 @@ vi.mock('@tanstack/react-router', () => ({
 
 import { LearningMethodsSection } from '../LearningMethodsSection'
 
-describe('Metode Belajar Pintar Yuk — Data & Komponen', () => {
+describe('Metode Belajar Pinter Yuks — Data & Komponen', () => {
   it('menyediakan 4 metode belajar unggulan dengan struktur lengkap termasuk cardLine dan cardMetric', () => {
     expect(LEARNING_METHODS.length).toBe(4)
 
