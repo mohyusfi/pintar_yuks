@@ -16,6 +16,8 @@
   3. **Moh. Yusfi** — NIM: F5512520089
 - **Jenama Resmi Aplikasi**: **Pinter Yuks**
 - **Tagline**: *"Pahami Konsepnya, Bukan Sekadar Hafal Rumusnya"*
+- **Repositori Kode Sumber (GitHub)**: https://github.com/mohyusfi/pintar_yuks
+- **Video Demo Aplikasi (YouTube)**: https://youtu.be/ZwiwJybcl3g?feature=shared
 - **Status Dokumen**: Laporan Akhir Perancangan Sistem (Final Design Report)
 
 ---
@@ -61,6 +63,9 @@ Palu, 31 Oktober 2026
 3. [BAB 3: ANALISIS DAN PERANCANGAN SISTEM](#bab-3-analisis-dan-perancangan-sistem)
    - 3.1 Analisis Kebutuhan Sistem
    - 3.2 Pemodelan Aliran Data (Data Flow Diagram / DFD)
+     - 3.2.1 Diagram Konteks (DFD Level 0)
+     - 3.2.2 DFD Level 1 (Dekomposisi 5 Modul Fungsional)
+     - 3.2.3 DFD Level 2 (Dekomposisi Sub-Proses Kritis)
    - 3.3 Pemodelan Interaksi Sistem (UML Sequence Diagram)
    - 3.4 Perancangan Basis Data (ERD & Kamus Data)
    - 3.5 Perancangan Antarmuka Pengguna (UI/UX)
